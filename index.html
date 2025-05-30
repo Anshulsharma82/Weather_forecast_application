@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./Javascript/script.js" defer></script>
+    <link rel="stylesheet" href="./Styles/style.css">
     <title>Weather Forecast Application</title>
 </head>
-<body>
-    <h1 class="text-orange-500">Weather Forecast Application</h1>
+<body class="p-0 m-0  box-border">
+    <header class="h-[10%] bg-orange-500">
+        <h1 class="text-gray-600 text-center text-3xl p-2 font-bold">Weather Forecast Application</h1>
+    </header>
+    <section>
+        <div class="flex flex-col justify-center items-center mt-4">
+            <form>
+                <input class="border border-gray-600 outline-none bg-gray-300 p-2 w-56 sm:w-72 rounded-2xl text-white placeholder:text-2xl text-2xl font-semibold" type="text" id="searchBox" placeholder="Search by city">
+                <input class="bg-orange-500 cursor-pointer text-white text-xl font-semibold py-2 px-4 rounded-2xl hover:bg-orange-700 transition-all duration-500 hover:py-3" type="submit" value="Search">
+            </form>
+            <div class="flex justify-center items-center w-[80%] sm:w-[50%] lg:w-[27%] mt-2">
+                <div class="w-[40%] h-0 border-t border-gray-400"></div>
+                <span class="mx-4 text-gray-500">OR</span>
+                <div class="w-[40%] h-0 border-t border-gray-400"></div>
+            </div>
+            <button class="bg-orange-500 cursor-pointer hover:bg-orange-700 py-2 px-10 mt-2 text-white text-xl font-semibold rounded-2xl">Use Current Location</button>
+        </div>
+    </section>
+
 </body>
 </html>
