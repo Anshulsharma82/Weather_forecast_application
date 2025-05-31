@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,37 @@
     <link rel="stylesheet" href="./Styles/style.css">
     <title>Weather Forecast Application</title>
 </head>
+
 <body class="p-0 m-0  box-border">
     <header class="h-[10%] bg-orange-500">
         <h1 class="text-gray-600 text-center text-3xl p-2 font-bold">Weather Forecast Application</h1>
     </header>
     <section>
-        <div class="flex flex-col justify-center items-center mt-4">
-            <form>
-                <input class="border border-gray-600 outline-none bg-gray-300 p-2 w-56 sm:w-72 rounded-2xl text-white placeholder:text-2xl text-2xl font-semibold" type="text" id="searchBox" placeholder="Search by city">
-                <input class="bg-orange-500 cursor-pointer text-white text-xl font-semibold py-2 px-4 rounded-2xl hover:bg-orange-700 transition-all duration-500 hover:py-3" type="submit" value="Search">
-            </form>
+        <div class="flex flex-col justify-center items-center mt-4" >
+            <div id="searchContainer">
+                <input
+                    class="relative border border-gray-600 outline-none bg-gray-300 p-2 w-56 sm:w-72 rounded-2xl text-white placeholder:text-2xl text-2xl font-semibold"
+                    type="text" id="cityInput" placeholder="Search by city">
+                <button
+                    class="bg-orange-500 cursor-pointer text-white text-xl font-semibold py-2 px-4 rounded-2xl hover:bg-orange-700 transition-all duration-500 hover:py-3"
+                    type="submit" id="searchBtn">Search
+                </button>
+            </div>
             <div class="flex justify-center items-center w-[80%] sm:w-[50%] lg:w-[27%] mt-2">
                 <div class="w-[40%] h-0 border-t border-gray-400"></div>
                 <span class="mx-4 text-gray-500">OR</span>
                 <div class="w-[40%] h-0 border-t border-gray-400"></div>
             </div>
-            <button class="bg-orange-500 cursor-pointer hover:bg-orange-700 py-2 px-10 mt-2 text-white text-xl font-semibold rounded-2xl">Use Current Location</button>
+            <button id="currentLocationButton"
+                class="bg-orange-500 cursor-pointer hover:bg-orange-700 py-2 px-10 mt-2 text-white text-xl font-semibold rounded-2xl">Use
+                Current Location</button>
         </div>
+        <main id="weatherContainer" class="flex flex-col justify-center items-center mt-4 mx-12">
+            <div class="border-2 rounded-[30px] bg-blue-300 w-[90%] sm:w-[100%] lg:w-[80%]  hidden" id="currentWeatherContainer"></div>
+            <div class="w-[90%] sm:w-[100%] lg:w-[80%] mt-4" id="forecastWeatherContainer"></div>
+        </main>
     </section>
 
 </body>
+
 </html>
