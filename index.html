@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./Javascript/script.js" defer></script>
-    <link rel="stylesheet" href="./Styles/style.css">
     <title>Weather Forecast Application</title>
 </head>
 
 <body class="p-0 m-0  box-border">
-    <header class="h-[10%] bg-orange-500">
-        <h1 class="text-gray-600 text-center text-3xl p-2 font-bold">Weather Forecast Application</h1>
+    <header class="h-[10%] p-1 bg-purple-700 flex justify-center items-center">
+        <img class="h-15 w-15" src="./Images/logo.png" alt="Logo">
+        <h1 class="text-white text-center text-3xl p-2 font-bold hidden sm:block">Weather Forecast Application</h1>
+        <h1 class="sm:hidden text-white text-center text-3xl p-2 font-bold">Weather App</h1>
     </header>
     <section>
         <div class="flex flex-col justify-center items-center mt-4" >
             <div id="searchContainer">
-                <input
-                    class="relative border border-gray-600 outline-none bg-gray-300 p-2 w-56 sm:w-72 rounded-2xl text-white placeholder:text-2xl text-2xl font-semibold"
-                    type="text" id="cityInput" placeholder="Search by city">
+               <input type="text" id="cityInput" placeholder="Search by city" class="w-56 sm:w-72 p-3 
+               rounded-2xl bg-white text-gray-800 text-lg font-semibold placeholder:text-gray-400 border
+                border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500
+                 focus:border-orange-500 transition-all duration-200" />
                 <button
-                    class="bg-orange-500 cursor-pointer text-white text-xl font-semibold py-2 px-4 rounded-2xl hover:bg-orange-700 transition-all duration-500 hover:py-3"
+                    class="bg-purple-500 cursor-pointer text-white text-xl font-semibold py-2 px-4 rounded-2xl hover:bg-purple-700 transition-all duration-500 hover:py-3"
                     type="submit" id="searchBtn">Search
                 </button>
             </div>
@@ -31,11 +33,11 @@
                 <div class="w-[40%] h-0 border-t border-gray-400"></div>
             </div>
             <button id="currentLocationButton"
-                class="bg-orange-500 cursor-pointer hover:bg-orange-700 py-2 px-10 mt-2 text-white text-xl font-semibold rounded-2xl">Use
+                class="bg-purple-500 cursor-pointer hover:bg-purple-700 py-2 px-10 mt-2 text-white text-xl font-semibold rounded-2xl">Use
                 Current Location</button>
         </div>
         <main id="weatherContainer" class="flex flex-col justify-center items-center mt-4 mx-12">
-            <div class="border-2 rounded-[30px] bg-blue-300 w-[90%] sm:w-[100%] lg:w-[80%]  hidden" id="currentWeatherContainer"></div>
+            <div class="border-2 rounded-[30px] bg-blue-600 w-[90%] sm:w-[100%] lg:w-[80%]  hidden transition-colors duration-1000 hover:bg-blue-800" id="currentWeatherContainer"></div>
             <div class="w-[90%] sm:w-[100%] lg:w-[80%] mt-4" id="forecastWeatherContainer"></div>
         </main>
     </section>
